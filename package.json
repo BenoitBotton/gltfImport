@@ -12,7 +12,8 @@
     "@tresjs/cientos": "^3.7.0",
     "@tresjs/core": "^4.2.10",
     "@vue/tsconfig": "^0.5.1",
-    "three": "^0.169.0"
+    "three": "^0.169.0",
+    "vuestic-ui": "^1.10.2"
   },
   "devDependencies": {
     "@babel/types": "^7.25.2",

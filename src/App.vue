@@ -7,7 +7,7 @@ const cutters = [
   {
     spiral: 1,
     ctype: 1313,
-    shape:'cylinder',
+    shape: 'cylinder',
     dia: 13.2,
     backrake: 20,
     siderake: 0,
@@ -20,7 +20,7 @@ const cutters = [
   {
     spiral: 2,
     ctype: 1308,
-    shape:'cylinder',
+    shape: 'cylinder',
     dia: 13.2,
     backrake: 25,
     siderake: 0,
@@ -38,13 +38,8 @@ const cutters = [
 <template>
   <TresCanvas clear-color="#82DBC5" window-size>
     <OrbitControls />
-    <TresPerspectiveCamera
-      :position="[40,40,30]"
-      :fov="35"
-      :look-at="[0, 0, 0]"
-    />
-    <Cutter v-for="cutter in cutters" :key="cutter.spiral"
-          :cutter="cutter" :color="cutter.color" />
+    <TresPerspectiveCamera :position="[40, 40, 30]" :fov="35" :look-at="[0, 0, 0]" />
+    <Cutter v-for="cutter in cutters" :key="cutter.spiral" :cutter="cutter" :color="cutter.color" />
     <TresAmbientLight :intensity="1" />
     <TresDirectionalLight :intensity="1" :position="[500, 500, 0]" />
     <TresDirectionalLight :intensity="0.5" :position="[-500, 500, 0]" />
