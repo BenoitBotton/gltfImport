@@ -39,8 +39,12 @@ const options = ["1313", "1308"]
 <template>
   <div class="container">
     <div>
-      <VaSelect v-model="cutters[0].ctype" :options="options" label="cutter 1" />
-      <VaSelect v-model="cutters[1].ctype" :options="options" label="cutter 2" />
+      <VaSelect v-model="cutters[0].ctype" :options="options" label="cutter 1 type" />
+      <VaSelect v-model="cutters[1].ctype" :options="options" label="cutter 2 type" />
+    </div>
+    <div>
+      <VaInput v-model.number="cutters[0].backrake" label="cutter 1 backrake" />
+      <VaInput v-model.number="cutters[1].backrake" label="cutter 2 backrake" />
     </div>
     <div class="mycanvas">
       <TresCanvas clear-color="#82DBC5" class="mycanvas">
