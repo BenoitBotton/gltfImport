@@ -50,7 +50,7 @@ const options = ["1313", "1308"]
       <TresCanvas clear-color="#82DBC5" class="mycanvas">
         <OrbitControls />
         <TresPerspectiveCamera :position="[40, 40, 30]" :fov="35" :look-at="[0, 0, 0]" />
-        <Cutter v-for="cutter in cutters" :key="cutter.spiral" :cutter="cutter" :color="cutter.color" />
+        <Cutter v-for="cutter in cutters" :key="cutter.spiral+cutter.ctype" :cutter="cutter" :color="cutter.color" />
         <TresAmbientLight :intensity="1" />
         <TresDirectionalLight :intensity="1" :position="[500, 500, 0]" />
         <TresDirectionalLight :intensity="0.5" :position="[-500, 500, 0]" />
