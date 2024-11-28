@@ -8,7 +8,7 @@
                             <TresMesh :position="cutter.spiral < 500 ? [0, 0, -r] : [0, 0, 0]"
                                 :rotation="[90 * toRad, 0, 0]">
                                 <Suspense fallback={null}>
-                                    <Comp :color="color" />
+                                    <Cylinder_1013_base :color="color" :scale="[cutter.dia/10,cutter.dia/10,cutter.lgth/13.2]"/>
                                 </Suspense>
                             </TresMesh>
                         </TresGroup>
@@ -20,14 +20,14 @@
 </template>
 
 <script setup lang="ts">
-//@ts-expect-error
-import * as Shapes from './components/index'
+import Cylinder_1013_base from './components/Cylinder_1013_base.vue'
 
 type Cutter = {
     spiral: number
     ctype: string
     shape: string
     dia: number
+    lgth: number
     backrake: number
     siderake: number
     yrot: number
@@ -44,9 +44,6 @@ const props = defineProps<{
 
 const r = props.cutter.dia / 2
 const toRad = Math.PI / 180
-const capitalize = <T extends string>(s: T) => (s[0].toUpperCase() + s.slice(1)) as Capitalize<typeof s>
-const cName = capitalize(props.cutter.shape) + '_' + props.cutter.ctype
-var Comp = Shapes[cName]
 </script>
 
 <style scoped></style>
