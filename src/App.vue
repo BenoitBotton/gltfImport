@@ -2,9 +2,8 @@
 import { TresCanvas } from '@tresjs/core'
 import { OrbitControls } from '@tresjs/cientos'
 import Cutter from './Cutter.vue'
-import { ref } from 'vue'
 
-const cutters = ref([
+const cutters = [
   {
     spiral: 1,
     ctype: '1313',
@@ -33,7 +32,7 @@ const cutters = ref([
     theta: 10,
     color: '#FF00FF',
   },
-])
+]
 
 const options = ["1313", "1308"]
 </script>
